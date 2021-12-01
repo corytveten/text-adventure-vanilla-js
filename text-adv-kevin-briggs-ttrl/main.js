@@ -13,6 +13,27 @@ const story = {
                 destination: 'goHome'
             }
         ]
+    },
+    battle: {
+        title: 'The Bloody Battle for Catistan',
+        story: "It's Avarice the Angry Aardvark, he looks angry.",
+        choices: [
+            {
+                choice: "Attack him with a sword.",
+                destination: "sword"
+            },
+            {
+                choice: "Attack him with a candlestick.",
+                destination: 'candlestick'
+            }
+        ]
+    },
+    goHome: {
+        title: "Back at Home",
+        story: "You find yourself back in the comfort of your own home. Don't worry about it, someone else will take care of the problems in Catistan. No need to feel guilty.",
+        image: 'video_game.png',
+        defaultDestination: 'attack',
+        buttonText: "Let's try this again"
     }
 }
 
@@ -42,7 +63,8 @@ function getInputValue() {
     const inputs = document.querySelectorAll('input[type="radio"]');
     for (let i=0; i<inputs.length; i++) {
         if (inputs[i].checked) {
-            console.log(inputs[i])
+            story.currentScene = inputs[i].getAttribute('data-destination')
+            renderScene();
         }
     }
 }
@@ -52,7 +74,7 @@ function getInputs() {
     for(let i=0; i<story[story.currentScene].choices.length; i++) {
         input += `
             <div>
-                <input id = "radio${i}" type="radio" name="choices"/>
+                <input data-destination=${story[story.currentScene].choices[i].destination} id = "radio${i}" type="radio" name="choices"/>
                 <label for="radio${i}">${story[story.currentScene].choices[i].choice}</label>
             </div>
         `
