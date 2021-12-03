@@ -45,14 +45,26 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function renderScene() {
+    let text = "Next";
+    let image = "";
+    if (story[story.currentScene].image) {
+        image = `<img></img>`
+    }
+    if (story[story.currentScene].buttonText) {
+        text = story[story.currentScene].buttonText
+    }
     content.innerHTML = 
     `
         <h1>${story[story.currentScene].title}</h1>
         <p>${story[story.currentScene].story}</p>
+        ${image}
         ${getInputs()}
-        <button id="submit-button">Go Forth!</button>
+        <button id="submit-button">${text}</button>
     `
-
+    if (story[story.currentScene].image) {
+        console.log('image')
+        document.querySelector('img').src = `./img/${story[story.currentScene].image}`
+    }
     const button = document.getElementById("submit-button");
     button.addEventListener('click', ()=> {
         getInputValue()
@@ -65,12 +77,18 @@ function getInputValue() {
         if (inputs[i].checked) {
             story.currentScene = inputs[i].getAttribute('data-destination')
             renderScene();
+            return;
         }
     }
+    story.currentScene = story[story.currentScene].defaultDestination
+    renderScene()
 }
 
 function getInputs() {
     let input = ""
+    if (!story[story.currentScene].choices) {
+        return ""
+    }
     for(let i=0; i<story[story.currentScene].choices.length; i++) {
         input += `
             <div>
