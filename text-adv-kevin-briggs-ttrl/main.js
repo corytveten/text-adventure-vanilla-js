@@ -39,11 +39,32 @@ function getStory(name) {
         },
         sword: {
             title: "The First Blow",
-            story: "The Aardvark knocks your sword to the ground with his snout!"
+            story: "The Aardvark knocks your sword to the ground with his snout!",
+            image: "aardvark_hit.png",
+            choices: [
+                {
+                    choice: "Lunge for the sword.",
+                    destination: "lunge"
+                },
+                {
+                    choice: "Grapple the snout.",
+                    destination: "grapple"
+                }
+            ]
         },
         candlestick: {
             title: "The First Blow",
-            story: "The Aardvark is caught off guard as you swing at him with the candlestick you hold in your weak hand. You strike a blow to his right eye."
+            story: "The Aardvark is caught off guard as you swing at him with the candlestick you hold in your weak hand. You strike a blow to his right eye.",
+            choices: [
+                {
+                    choice: "Leap back.",
+                    destination: "leapBack"
+                },
+                {
+                    choice: "Continue to attack that eye.",
+                    destination: 'eye'
+                }
+            ]
         }
     }
 }
