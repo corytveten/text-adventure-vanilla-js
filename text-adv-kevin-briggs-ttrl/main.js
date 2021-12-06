@@ -36,6 +36,14 @@ function getStory(name) {
             image: 'video_game.png',
             defaultDestination: 'attack',
             buttonText: "Let's try this again"
+        },
+        sword: {
+            title: "The First Blow",
+            story: "The Aardvark knocks your sword to the ground with his snout!"
+        },
+        candlestick: {
+            title: "The First Blow",
+            story: "The Aardvark is caught off guard as you swing at him with the candlestick you hold in your weak hand. You strike a blow to his right eye."
         }
     }
 }
