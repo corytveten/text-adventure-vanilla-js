@@ -65,6 +65,35 @@ function getStory(name) {
                     destination: 'eye'
                 }
             ]
+        },
+        lunge: {
+            title: "A Lunge at the Sword",
+            story: "You turn your back to grab your sword. As you dive to the ground, you feel the weight of the aardvark crash down on your pack. You are pinned to the ground, your fingers reaching toward the hilt just our of reach.",
+            choices: [
+                {
+                    choice: "Stretch your arm to grasp the sword.",
+                    destination: "stretch" 
+                },
+                {
+                    choice: "Attempt to wrestle the aardvark of your back.",
+                    destination: "wrestle"
+                }
+            ]
+        },
+        grapple: {
+            title: "A Fistful of Snout",
+            story: "Realizing the sword is out of reach, you grab on to the aardvark's snout, hoping it might be a vulnerable spot.",
+            choices: [
+                { 
+                    choice: "Holding the snout, you plant your feet and attempt an over the shoulder throw.",
+                    destination: "throwAttempt"
+                },
+                {
+                    choice: "Grab the dagger on your hip and attempt an nostril stab.",
+                    destination: "nostrilStabAttempt"
+                }
+            ]
+
         }
     }
 }
