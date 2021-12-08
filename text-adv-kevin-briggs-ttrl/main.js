@@ -93,7 +93,34 @@ function getStory(name) {
                     destination: "nostrilStabAttempt"
                 }
             ]
-
+        },
+        leapBack: {
+            title: "You Leap Back",
+            story: "As you put a bit of distance between you and the aardvark, you notice he is dazed.",
+            choices: [
+                {
+                    choice: "You turn your back and run.",
+                    destination: "runAway"
+                },
+                {
+                    choice: "You gather yourself and charge back at the aardvark, intent on ending him.",
+                    destination: "chargeAardvark"
+                }
+            ]
+        },
+        eye: {
+            title: "Eye Attack!",
+            story: "A fury takes over as you begin to savagely beat the aardvark's eye. Blood and eye guts begin to spray across your face as the aardvark howls.",
+            choices: [
+                {
+                    choice: "Continue the attack, don't let up now!",
+                    destination: "fury"
+                },
+                {
+                    choice: "Your berserker trance is broken for a moment as you are horrified at your barbarism. You back away from the wounded creature.",
+                    destination: "backAway"
+                }
+            ]
         }
     }
 }
