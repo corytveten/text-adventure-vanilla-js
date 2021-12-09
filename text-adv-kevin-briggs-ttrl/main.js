@@ -75,7 +75,7 @@ function getStory(name) {
                     destination: "stretch" 
                 },
                 {
-                    choice: "Attempt to wrestle the aardvark of your back.",
+                    choice: "Attempt to wrestle the aardvark off your back.",
                     destination: "wrestle"
                 }
             ]
@@ -119,6 +119,20 @@ function getStory(name) {
                 {
                     choice: "Your berserker trance is broken for a moment as you are horrified at your barbarism. You back away from the wounded creature.",
                     destination: "backAway"
+                }
+            ]
+        },
+        stretch: {
+            title: "An Outstretched Arm",
+            story: "As you strain to extend your arm an inch further you miraculously feel the leather of the hilt. You leverage just enough pressure to bring the hilt into the grasp of your hand. Swiftly, you bring the blade up and into the side of the aardvark. The direct hit causes the aardvark to lose it's hold on you and you bring yourself to your feet.",
+            choices: [
+                {
+                    choice: "Spilled blood has awoken a Norse berserker inside you. You find yourself in a trance of fury and compelled to leap on the aardvark, intent on a kill",
+                    destination: "fury"
+                },
+                {
+                    choice: "The aardvark is injured and dazed: the perfect moment to make your escape",
+                    destination: "runAway"
                 }
             ]
         }
