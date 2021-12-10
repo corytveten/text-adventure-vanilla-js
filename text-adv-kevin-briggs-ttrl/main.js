@@ -135,6 +135,20 @@ function getStory(name) {
                     destination: "runAway"
                 }
             ]
+        },
+        runAway: {
+            title: "Escape",
+            story: "The wounded aardvark bleats out a horrible noise and you move far out of it's reach. You are able to find high ground, providing aa view of the unfamiliar land. In the distance, you see the light of a town.",
+            choices: [
+                {
+                    choice: "Follow the light to explore the town.",
+                    destination: "towardTown",
+                },
+                {
+                    choice: "Hey look, some berries. I am pretty hungry.",
+                    destination: "pickBerries"
+                }
+            ]
         }
     }
 }
