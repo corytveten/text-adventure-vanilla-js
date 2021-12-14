@@ -149,6 +149,20 @@ function getStory(name) {
                     destination: "pickBerries"
                 }
             ]
+        },
+        chargeAardvark: {
+            title: "Charge!",
+            story: "Instinctively, you leap onto the aardvark, locking one arm around his neck, your face in his.",
+            choices: [
+                {
+                    choice: "Unleash hell on this foul creature.",
+                    destination: "fury"
+                },
+                {
+                    choice: "*sniff sniff* What is that scent? It is positively enchanting.",
+                    destination: "changeOfAttitude"
+                }
+            ]
         }
     }
 }
