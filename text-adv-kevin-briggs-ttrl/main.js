@@ -4,7 +4,7 @@ function getStory(name) {
         currentScene: "attack",
         attack: {
             title: "Chapter 1",
-            story: `Once upon a time, the village of Catistan lived in peace. But one day, it was attacked bu Avarice the Angry Aardvark. The Premier of Catistan said, "There's only one person who can save us, ${name}!`,
+            story: `For hundreds of years the village of Catistan lived in peace. But one day, the town was attacked by an enormous, angry aardvark. The Premier of Catistan said, "There's only one person who can save us, ${name}!`,
             choices: [
                 {
                     choice: "Yes, I'm ready to accept!",
@@ -18,7 +18,7 @@ function getStory(name) {
         },
         battle: {
             title: 'The Bloody Battle for Catistan',
-            story: "It's Avarice the Angry Aardvark, he looks angry.",
+            story: "The town elder recognized the aardvark: 'It's Avarice the Angry Aardvark, he looks angry.' The aardvark lets out a demonic belch and charges a baby in a stroller. You must strike at once.",
             choices: [
                 {
                     choice: "Attack him with a sword.",
